@@ -104,4 +104,4 @@ Please fork and clone this repository. Create a new Xcode project inside of the 
 
 ## Complete Storyboard Preview
 
-![preview-image](https://raw.githubusercontent.com/LambdaSchool/grail-diary-part-1/master/storyboard-complete.png)
+![preview-image](https://raw.githubusercontent.com/La3mbdaSchool/grail-diary-part-1/master/storyboard-complete.png)
