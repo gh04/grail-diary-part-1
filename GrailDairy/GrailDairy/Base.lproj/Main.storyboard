@@ -35,7 +35,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2VG-b8-8ex">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2VG-b8-8ex">
                                                     <rect key="frame" x="20" y="10.5" width="67.5" height="38.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ch-vz-Xbg">
@@ -51,12 +51,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="7ch-vz-Xbg" firstAttribute="leading" secondItem="2VG-b8-8ex" secondAttribute="leadingMargin" id="IYT-Gx-TjO"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="2VG-b8-8ex" firstAttribute="leading" secondItem="rHa-sj-d9l" secondAttribute="leadingMargin" id="L03-Z3-9kA"/>
+                                                <constraint firstItem="zbI-Cg-wlu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2VG-b8-8ex" secondAttribute="trailing" constant="8" id="PPr-dV-gpK"/>
                                                 <constraint firstItem="2VG-b8-8ex" firstAttribute="centerY" secondItem="rHa-sj-d9l" secondAttribute="centerY" id="QgF-yb-YyX"/>
                                                 <constraint firstItem="zbI-Cg-wlu" firstAttribute="centerY" secondItem="rHa-sj-d9l" secondAttribute="centerY" id="fHR-7J-6v7"/>
                                                 <constraint firstItem="zbI-Cg-wlu" firstAttribute="trailing" secondItem="rHa-sj-d9l" secondAttribute="trailingMargin" id="mBJ-lZ-6Ve"/>
@@ -80,7 +79,7 @@
                             <barButtonItem id="0GO-ed-ayP"/>
                             <barButtonItem systemItem="add" id="TAV-GE-cAe">
                                 <connections>
-                                    <segue destination="vfZ-zK-cc5" kind="presentation" identifier="" id="o7G-9S-HvM"/>
+                                    <segue destination="vfZ-zK-cc5" kind="presentation" identifier="AddPOIModalSegue" id="o7G-9S-HvM"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -106,8 +105,8 @@
                                     <barButtonItem title="Save" id="Ww8-uu-iLN"/>
                                 </items>
                             </toolbar>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OFe-Ta-qSI">
-                                <rect key="frame" x="20" y="62" width="374" height="302.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OFe-Ta-qSI">
+                                <rect key="frame" x="20" y="64" width="374" height="302.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New POI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cB0-Uj-Q2c">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
@@ -160,11 +159,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EKD-Bb-HNE" firstAttribute="leading" secondItem="lZZ-JA-WDw" secondAttribute="leading" id="4Xc-Ow-TnC"/>
-                            <constraint firstItem="OFe-Ta-qSI" firstAttribute="leading" secondItem="lZZ-JA-WDw" secondAttribute="leading" constant="20" id="Oyc-na-LAS"/>
                             <constraint firstItem="EKD-Bb-HNE" firstAttribute="trailing" secondItem="lZZ-JA-WDw" secondAttribute="trailing" id="SfO-ri-7xv"/>
-                            <constraint firstItem="OFe-Ta-qSI" firstAttribute="top" secondItem="lZZ-JA-WDw" secondAttribute="top" constant="20" id="UNs-bm-IKZ"/>
+                            <constraint firstItem="OFe-Ta-qSI" firstAttribute="leading" secondItem="lZZ-JA-WDw" secondAttribute="leading" constant="20" id="VjG-uf-mSH"/>
+                            <constraint firstItem="lZZ-JA-WDw" firstAttribute="trailing" secondItem="OFe-Ta-qSI" secondAttribute="trailing" constant="20" id="crl-Bl-4lG"/>
+                            <constraint firstItem="OFe-Ta-qSI" firstAttribute="top" secondItem="lZZ-JA-WDw" secondAttribute="top" constant="20" id="ed8-qA-eew"/>
                             <constraint firstItem="EKD-Bb-HNE" firstAttribute="bottom" secondItem="lZZ-JA-WDw" secondAttribute="bottom" id="nL2-4x-nPe"/>
-                            <constraint firstItem="lZZ-JA-WDw" firstAttribute="trailing" secondItem="OFe-Ta-qSI" secondAttribute="trailing" constant="20" id="nqj-g8-vFe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lZZ-JA-WDw"/>
                     </view>
