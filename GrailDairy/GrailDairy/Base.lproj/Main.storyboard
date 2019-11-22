@@ -93,7 +93,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="SEM-QK-2dS" id="pjC-Vd-hLo"/>
+                        <outlet property="tableView" destination="SEM-QK-2dS" id="9SG-Cv-AmA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -113,7 +113,7 @@
                                 <items>
                                     <barButtonItem title="Cancel" id="kJI-yx-AV5">
                                         <connections>
-                                            <action selector="CancelTapped:" destination="vfZ-zK-cc5" id="CUV-Ky-vnN"/>
+                                            <action selector="cancelTapped:" destination="vfZ-zK-cc5" id="ZP5-Ig-f1j"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="V3q-zF-3Kb"/>
@@ -194,6 +194,7 @@
                     <connections>
                         <outlet property="clue1TextField" destination="aVd-fV-Lm9" id="9L1-gU-kYs"/>
                         <outlet property="clue2TextField" destination="PVl-9O-ozE" id="6Ao-De-28Q"/>
+                        <outlet property="clue3TextField" destination="ysM-Sw-q0O" id="KAd-1O-G38"/>
                         <outlet property="clueThreeTextField" destination="ysM-Sw-q0O" id="E7w-cK-2Kk"/>
                         <outlet property="countryTextField" destination="h09-bm-laR" id="nlu-wA-sgl"/>
                         <outlet property="locationTextField" destination="Znp-Fr-YQm" id="OBd-jA-CIG"/>

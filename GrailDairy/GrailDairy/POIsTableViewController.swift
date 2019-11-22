@@ -14,7 +14,8 @@ class POIsTableViewController: UIViewController {
     
     var pois: [POI] = []
     
-     @IBOutlet weak var tableView: UITableView!
+
+    @IBOutlet weak var tableView: UITableView!
     
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
