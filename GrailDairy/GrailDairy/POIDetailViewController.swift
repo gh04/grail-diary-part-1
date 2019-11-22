@@ -12,10 +12,12 @@ class POIDetailViewController: UIViewController {
 
     
     //Mark: - IBOutlets
-    @IBOutlet var location: UILabel!
-    @IBOutlet var country: UILabel!
-    @IBOutlet var cluesTextView: UITextView!
+  
     
+    @IBOutlet weak var locationTextView: UILabel!
+    @IBOutlet weak var countryTextView: UILabel!
+    @IBOutlet weak var cluesTextView: UILabel!
+    @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

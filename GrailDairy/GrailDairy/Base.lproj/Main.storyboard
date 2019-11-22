@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-QK-2dS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SEM-QK-2dS">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -35,36 +35,34 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2VG-b8-8ex">
-                                                    <rect key="frame" x="20" y="11" width="65.5" height="49"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6HV-dn-2yy">
+                                                    <rect key="frame" x="20" y="4.5" width="90" height="62"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ch-vz-Xbg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="65.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Location" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WEo-Eg-g8B">
+                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                                             <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="btk-Ql-NkK">
-                                                            <rect key="frame" x="0.0" y="28.5" width="61.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Country" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-3V-b2b">
+                                                            <rect key="frame" x="0.0" y="32" width="76" height="30"/>
                                                             <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="2VG-b8-8ex" firstAttribute="leading" secondItem="rHa-sj-d9l" secondAttribute="leadingMargin" id="L03-Z3-9kA"/>
-                                                <constraint firstItem="zbI-Cg-wlu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2VG-b8-8ex" secondAttribute="trailing" constant="6" id="PPr-dV-gpK"/>
-                                                <constraint firstItem="2VG-b8-8ex" firstAttribute="centerY" secondItem="rHa-sj-d9l" secondAttribute="centerY" id="QgF-yb-YyX"/>
+                                                <constraint firstItem="zbI-Cg-wlu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6HV-dn-2yy" secondAttribute="trailing" constant="8" id="9UR-5g-dc7"/>
+                                                <constraint firstItem="6HV-dn-2yy" firstAttribute="centerY" secondItem="rHa-sj-d9l" secondAttribute="centerY" id="VEj-SP-PiN"/>
+                                                <constraint firstItem="6HV-dn-2yy" firstAttribute="leading" secondItem="rHa-sj-d9l" secondAttribute="leadingMargin" id="eE9-f4-zag"/>
                                                 <constraint firstItem="zbI-Cg-wlu" firstAttribute="centerY" secondItem="rHa-sj-d9l" secondAttribute="centerY" id="fHR-7J-6v7"/>
                                                 <constraint firstItem="zbI-Cg-wlu" firstAttribute="trailing" secondItem="rHa-sj-d9l" secondAttribute="trailingMargin" id="mBJ-lZ-6Ve"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cluesLabel" destination="zbI-Cg-wlu" id="acv-Tq-3dw"/>
-                                            <outlet property="countryLabel" destination="btk-Ql-NkK" id="0uK-Bb-ixw"/>
-                                            <outlet property="locationLabel" destination="7ch-vz-Xbg" id="9Bq-1F-fCN"/>
                                             <segue destination="TmN-ck-LfO" kind="show" identifier="ShowPOIDetailSegue" id="Hd9-1w-nLd"/>
                                         </connections>
                                     </tableViewCell>
@@ -131,7 +129,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lcation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Znp-Fr-YQm">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lcation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Znp-Fr-YQm" userLabel="Location Text Field">
                                         <rect key="frame" x="0.0" y="52" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -141,11 +139,15 @@
                                             <action selector="locationTextField:" destination="YVJ-d0-UgZ" eventType="editingDidEnd" id="SRn-yE-ili"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCp-cn-U9R">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h09-bm-laR" userLabel="Country Text Field">
                                         <rect key="frame" x="0.0" y="98" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="location:" destination="YVJ-d0-UgZ" eventType="editingDidEnd" id="Z5P-Aj-38S"/>
+                                            <action selector="locationTextField:" destination="YVJ-d0-UgZ" eventType="editingDidEnd" id="2oj-hU-VOg"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKg-xs-uNx">
                                         <rect key="frame" x="0.0" y="144" width="374" height="20.5"/>
@@ -187,9 +189,9 @@
                     </view>
                     <connections>
                         <outlet property="clue1TextField" destination="aVd-fV-Lm9" id="9L1-gU-kYs"/>
-                        <outlet property="clue2TextField" destination="aVd-fV-Lm9" id="dbp-C5-DJK"/>
-                        <outlet property="clueThreeTextField" destination="ysM-Sw-q0O" id="B0k-fD-DST"/>
-                        <outlet property="countryTextField" destination="Znp-Fr-YQm" id="O2D-bL-Xi5"/>
+                        <outlet property="clue2TextField" destination="PVl-9O-ozE" id="6Ao-De-28Q"/>
+                        <outlet property="clueThreeTextField" destination="ysM-Sw-q0O" id="E7w-cK-2Kk"/>
+                        <outlet property="countryTextField" destination="h09-bm-laR" id="nlu-wA-sgl"/>
                         <outlet property="locationTextField" destination="Znp-Fr-YQm" id="OBd-jA-CIG"/>
                     </connections>
                 </viewController>
@@ -231,7 +233,7 @@
                                     <constraint firstAttribute="width" constant="150" id="XRQ-I3-Kxj"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Times Square - New York, New York, USA" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-S1-n2x">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-S1-n2x">
                                 <rect key="frame" x="20" y="411" width="374" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -259,9 +261,12 @@
                         <viewLayoutGuide key="safeArea" id="qYB-N1-nE8"/>
                     </view>
                     <connections>
-                        <outlet property="cluesTextView" destination="wrk-S1-n2x" id="CqV-gg-GGv"/>
+                        <outlet property="cluesTextView" destination="ACR-NM-Hpp" id="DPb-bj-03L"/>
                         <outlet property="country" destination="Bei-51-BgW" id="1lQ-7h-rbR"/>
+                        <outlet property="countryTextView" destination="Bei-51-BgW" id="CXX-Sx-mbB"/>
                         <outlet property="location" destination="faQ-T1-yra" id="u0s-Wt-GEX"/>
+                        <outlet property="locationTextView" destination="faQ-T1-yra" id="28p-AC-2mh"/>
+                        <outlet property="textView" destination="wrk-S1-n2x" id="rFm-fL-IAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59H-N5-K4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
