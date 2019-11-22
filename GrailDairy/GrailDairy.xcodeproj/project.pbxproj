@@ -57,6 +57,7 @@
 		63333E81238771E30088E1F9 /* View Cell */ = {
 			isa = PBXGroup;
 			children = (
+				63333E7F238771D80088E1F9 /* POITableViewCell.swift */,
 			);
 			path = "View Cell";
 			sourceTree = "<group>";
@@ -94,7 +95,6 @@
 				634F46D6237E6C3C00FFA57E /* LaunchScreen.storyboard */,
 				634F46D9237E6C3C00FFA57E /* Info.plist */,
 				63333E7E238771880088E1F9 /* View Controllers */,
-				63333E7F238771D80088E1F9 /* POITableViewCell.swift */,
 				63333E82238771FB0088E1F9 /* Model */,
 			);
 			path = GrailDairy;

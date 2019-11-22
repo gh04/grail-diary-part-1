@@ -35,34 +35,38 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6HV-dn-2yy">
-                                                    <rect key="frame" x="20" y="4.5" width="90" height="62"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uev-pd-SES">
+                                                    <rect key="frame" x="20" y="16" width="68.5" height="38.5"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Location" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WEo-Eg-g8B">
-                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2M8-hL-gyi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="68.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Country" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-3V-b2b">
-                                                            <rect key="frame" x="0.0" y="32" width="76" height="30"/>
                                                             <nil key="textColor"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euE-Ad-4UB">
+                                                            <rect key="frame" x="0.0" y="22.5" width="48.5" height="16"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="zbI-Cg-wlu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6HV-dn-2yy" secondAttribute="trailing" constant="8" id="9UR-5g-dc7"/>
-                                                <constraint firstItem="6HV-dn-2yy" firstAttribute="centerY" secondItem="rHa-sj-d9l" secondAttribute="centerY" id="VEj-SP-PiN"/>
-                                                <constraint firstItem="6HV-dn-2yy" firstAttribute="leading" secondItem="rHa-sj-d9l" secondAttribute="leadingMargin" id="eE9-f4-zag"/>
+                                                <constraint firstItem="zbI-Cg-wlu" firstAttribute="trailing" secondItem="rHa-sj-d9l" secondAttribute="trailingMargin" id="7n8-ZQ-H8d"/>
+                                                <constraint firstItem="uev-pd-SES" firstAttribute="centerY" secondItem="rHa-sj-d9l" secondAttribute="centerY" id="8lU-EF-R06"/>
+                                                <constraint firstItem="zbI-Cg-wlu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uev-pd-SES" secondAttribute="trailing" constant="8" id="OWp-Cc-ROO"/>
+                                                <constraint firstItem="zbI-Cg-wlu" firstAttribute="centerY" secondItem="rHa-sj-d9l" secondAttribute="centerY" id="TNc-t0-94Y"/>
+                                                <constraint firstItem="uev-pd-SES" firstAttribute="leading" secondItem="rHa-sj-d9l" secondAttribute="leadingMargin" id="e2F-Gg-PHh"/>
                                                 <constraint firstItem="zbI-Cg-wlu" firstAttribute="centerY" secondItem="rHa-sj-d9l" secondAttribute="centerY" id="fHR-7J-6v7"/>
                                                 <constraint firstItem="zbI-Cg-wlu" firstAttribute="trailing" secondItem="rHa-sj-d9l" secondAttribute="trailingMargin" id="mBJ-lZ-6Ve"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cluesLabel" destination="zbI-Cg-wlu" id="acv-Tq-3dw"/>
+                                            <outlet property="countryLabel" destination="euE-Ad-4UB" id="B8I-S1-MyV"/>
+                                            <outlet property="locationLabel" destination="2M8-hL-gyi" id="0lV-un-iT9"/>
                                             <segue destination="TmN-ck-LfO" kind="show" identifier="ShowPOIDetailSegue" id="Hd9-1w-nLd"/>
                                         </connections>
                                     </tableViewCell>
@@ -109,13 +113,13 @@
                                 <items>
                                     <barButtonItem title="Cancel" id="kJI-yx-AV5">
                                         <connections>
-                                            <action selector="cancelButtonTapped:" destination="vfZ-zK-cc5" id="zxD-YA-09Y"/>
+                                            <action selector="CancelTapped:" destination="vfZ-zK-cc5" id="CUV-Ky-vnN"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="V3q-zF-3Kb"/>
                                     <barButtonItem title="Save" id="Ww8-uu-iLN">
                                         <connections>
-                                            <action selector="saveButtonTapped:" destination="vfZ-zK-cc5" id="aC3-dV-qmP"/>
+                                            <action selector="saveTapped:" destination="vfZ-zK-cc5" id="H12-yG-bI6"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -261,12 +265,15 @@
                         <viewLayoutGuide key="safeArea" id="qYB-N1-nE8"/>
                     </view>
                     <connections>
+                        <outlet property="cluesLabel" destination="ACR-NM-Hpp" id="366-es-Y8f"/>
                         <outlet property="cluesTextView" destination="ACR-NM-Hpp" id="DPb-bj-03L"/>
                         <outlet property="country" destination="Bei-51-BgW" id="1lQ-7h-rbR"/>
+                        <outlet property="countryLabel" destination="Bei-51-BgW" id="c8O-by-glq"/>
                         <outlet property="countryTextView" destination="Bei-51-BgW" id="CXX-Sx-mbB"/>
                         <outlet property="location" destination="faQ-T1-yra" id="u0s-Wt-GEX"/>
+                        <outlet property="locationLabel" destination="faQ-T1-yra" id="DrQ-i3-tpE"/>
                         <outlet property="locationTextView" destination="faQ-T1-yra" id="28p-AC-2mh"/>
-                        <outlet property="textView" destination="wrk-S1-n2x" id="rFm-fL-IAw"/>
+                        <outlet property="textView" destination="wrk-S1-n2x" id="mcS-VX-NRJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59H-N5-K4M" userLabel="First Responder" sceneMemberID="firstResponder"/>

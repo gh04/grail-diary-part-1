@@ -23,26 +23,29 @@ class AddPOIViewController: UIViewController {
     @IBOutlet var countryTextField: UITextField!
     @IBOutlet var clue1TextField: UITextField!
     @IBOutlet var clue2TextField: UITextField!
-    @IBOutlet var clueThreeTextField: UITextField!
+    @IBOutlet var clue3TextField: UITextField!
     
     var delegate: AddPOIDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationTextField.delegate = self
 
-        // Do any additional setup after loading the view.
+        
     }
     
-    
-    @IBAction func cancelButtonTapped(_ sender: Any) {
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
-  
-    @IBAction func saveButtonTapped(_ sender: Any) {
-        guard let location = locationTextField.text,
-            let country = countryTextField.text,
-            !location.isEmpty,
-            !country.isEmpty else { return }
+    
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+            guard let location = locationTextField.text,
+                let country = countryTextField.text,
+                !location.isEmpty,
+                !country.isEmpty else { return }
+    
+
     
     var poi = POI(location: location, country: country, clues: [])
     
@@ -56,10 +59,35 @@ class AddPOIViewController: UIViewController {
             poi.clues.append(clue2)
         }
         
-        if let clue3 = clueThreeTextField.text,
+        if let clue3 = clue3TextField.text,
             !clue3.isEmpty {
             poi.clues.append(clue3)
         }
         delegate?.poiWasAdded(poi)
 }
+}
+
+extension AddPOIViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text,
+            !text.isEmpty {
+            switch textField {
+            case locationTextField:
+                locationTextField.becomeFirstResponder()
+            case countryTextField:
+                countryTextField.becomeFirstResponder()
+            case clue1TextField:
+                clue1TextField.becomeFirstResponder()
+            case clue2TextField:
+                clue2TextField.becomeFirstResponder()
+            case clue3TextField:
+                clue3TextField.becomeFirstResponder()
+            default:
+                textField.resignFirstResponder()
+                
+            }
+        }
+        return false
+    }
 }
