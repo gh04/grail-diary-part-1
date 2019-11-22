@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63333E79238771250088E1F9 /* POIsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63333E78238771250088E1F9 /* POIsTableViewController.swift */; };
+		63333E7B238771420088E1F9 /* AddPOIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63333E7A238771420088E1F9 /* AddPOIViewController.swift */; };
+		63333E7D2387716E0088E1F9 /* POIDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63333E7C2387716E0088E1F9 /* POIDetailViewController.swift */; };
+		63333E80238771D80088E1F9 /* POITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63333E7F238771D80088E1F9 /* POITableViewCell.swift */; };
+		63333E84238772490088E1F9 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63333E83238772490088E1F9 /* POI.swift */; };
 		634F46CE237E6C3400FFA57E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F46CD237E6C3400FFA57E /* AppDelegate.swift */; };
-		634F46D0237E6C3400FFA57E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634F46CF237E6C3400FFA57E /* ViewController.swift */; };
 		634F46D3237E6C3400FFA57E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F46D1237E6C3400FFA57E /* Main.storyboard */; };
 		634F46D5237E6C3C00FFA57E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 634F46D4237E6C3C00FFA57E /* Assets.xcassets */; };
 		634F46D8237E6C3C00FFA57E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634F46D6237E6C3C00FFA57E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63333E78238771250088E1F9 /* POIsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = POIsTableViewController.swift; path = ../POIsTableViewController.swift; sourceTree = "<group>"; };
+		63333E7A238771420088E1F9 /* AddPOIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddPOIViewController.swift; path = ../AddPOIViewController.swift; sourceTree = "<group>"; };
+		63333E7C2387716E0088E1F9 /* POIDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = POIDetailViewController.swift; path = ../POIDetailViewController.swift; sourceTree = "<group>"; };
+		63333E7F238771D80088E1F9 /* POITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POITableViewCell.swift; sourceTree = "<group>"; };
+		63333E83238772490088E1F9 /* POI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
 		634F46CA237E6C3400FFA57E /* GrailDairy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrailDairy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634F46CD237E6C3400FFA57E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		634F46CF237E6C3400FFA57E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		634F46D2237E6C3400FFA57E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		634F46D4237E6C3C00FFA57E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		634F46D7237E6C3C00FFA57E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +43,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63333E7E238771880088E1F9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63333E78238771250088E1F9 /* POIsTableViewController.swift */,
+				63333E7A238771420088E1F9 /* AddPOIViewController.swift */,
+				63333E7C2387716E0088E1F9 /* POIDetailViewController.swift */,
+				63333E81238771E30088E1F9 /* View Cell */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		63333E81238771E30088E1F9 /* View Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Cell";
+			sourceTree = "<group>";
+		};
+		63333E82238771FB0088E1F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63333E83238772490088E1F9 /* POI.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		634F46C1237E6C3300FFA57E = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +89,13 @@
 			isa = PBXGroup;
 			children = (
 				634F46CD237E6C3400FFA57E /* AppDelegate.swift */,
-				634F46CF237E6C3400FFA57E /* ViewController.swift */,
 				634F46D1237E6C3400FFA57E /* Main.storyboard */,
 				634F46D4237E6C3C00FFA57E /* Assets.xcassets */,
 				634F46D6237E6C3C00FFA57E /* LaunchScreen.storyboard */,
 				634F46D9237E6C3C00FFA57E /* Info.plist */,
+				63333E7E238771880088E1F9 /* View Controllers */,
+				63333E7F238771D80088E1F9 /* POITableViewCell.swift */,
+				63333E82238771FB0088E1F9 /* Model */,
 			);
 			path = GrailDairy;
 			sourceTree = "<group>";
@@ -135,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				634F46D0237E6C3400FFA57E /* ViewController.swift in Sources */,
+				63333E79238771250088E1F9 /* POIsTableViewController.swift in Sources */,
+				63333E7B238771420088E1F9 /* AddPOIViewController.swift in Sources */,
+				63333E7D2387716E0088E1F9 /* POIDetailViewController.swift in Sources */,
 				634F46CE237E6C3400FFA57E /* AppDelegate.swift in Sources */,
+				63333E84238772490088E1F9 /* POI.swift in Sources */,
+				63333E80238771D80088E1F9 /* POITableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
