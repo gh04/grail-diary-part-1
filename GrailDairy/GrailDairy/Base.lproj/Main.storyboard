@@ -13,7 +13,7 @@
         <!--POIsTableViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="POIsTableViewController" id="BYZ-38-t0r" userLabel="POIsTableViewController" customClass="POIsTableViewController" customModule="GrailDairy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="POIsTableViewController" customClass="POIsTableViewController" customModule="GrailDairy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Grail Dairy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,11 +66,14 @@
                                         <connections>
                                             <outlet property="cluesLabel" destination="zbI-Cg-wlu" id="acv-Tq-3dw"/>
                                             <outlet property="countryLabel" destination="euE-Ad-4UB" id="B8I-S1-MyV"/>
-                                            <outlet property="locationLabel" destination="2M8-hL-gyi" id="0lV-un-iT9"/>
+                                            <outlet property="locationLabel" destination="2M8-hL-gyi" id="nd9-ae-mwx"/>
                                             <segue destination="TmN-ck-LfO" kind="show" identifier="ShowPOIDetailSegue" id="Hd9-1w-nLd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XrC-aR-a05"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,13 +114,13 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKD-Bb-HNE">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="kJI-yx-AV5">
+                                    <barButtonItem systemItem="cancel" id="kJI-yx-AV5">
                                         <connections>
                                             <action selector="cancelTapped:" destination="vfZ-zK-cc5" id="ZP5-Ig-f1j"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="V3q-zF-3Kb"/>
-                                    <barButtonItem title="Save" id="Ww8-uu-iLN">
+                                    <barButtonItem systemItem="save" id="Ww8-uu-iLN">
                                         <connections>
                                             <action selector="saveTapped:" destination="vfZ-zK-cc5" id="H12-yG-bI6"/>
                                         </connections>
@@ -139,8 +142,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="location:" destination="YVJ-d0-UgZ" eventType="editingDidEnd" id="uFz-HJ-v8n"/>
-                                            <action selector="locationTextField:" destination="YVJ-d0-UgZ" eventType="editingDidEnd" id="SRn-yE-ili"/>
+                                            <outlet property="delegate" destination="vfZ-zK-cc5" id="ieW-DH-oGs"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h09-bm-laR" userLabel="Country Text Field">
@@ -151,6 +153,7 @@
                                         <connections>
                                             <action selector="location:" destination="YVJ-d0-UgZ" eventType="editingDidEnd" id="Z5P-Aj-38S"/>
                                             <action selector="locationTextField:" destination="YVJ-d0-UgZ" eventType="editingDidEnd" id="2oj-hU-VOg"/>
+                                            <outlet property="delegate" destination="vfZ-zK-cc5" id="xhs-4L-fLm"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKg-xs-uNx">
@@ -164,18 +167,27 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vfZ-zK-cc5" id="GNl-N8-zVb"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVl-9O-ozE">
                                         <rect key="frame" x="0.0" y="226.5" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vfZ-zK-cc5" id="FUH-K7-w2X"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Clue 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysM-Sw-q0O">
                                         <rect key="frame" x="0.0" y="272.5" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vfZ-zK-cc5" id="C76-tT-VXc"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -192,12 +204,11 @@
                         <viewLayoutGuide key="safeArea" id="lZZ-JA-WDw"/>
                     </view>
                     <connections>
-                        <outlet property="clue1TextField" destination="aVd-fV-Lm9" id="9L1-gU-kYs"/>
-                        <outlet property="clue2TextField" destination="PVl-9O-ozE" id="6Ao-De-28Q"/>
-                        <outlet property="clue3TextField" destination="ysM-Sw-q0O" id="KAd-1O-G38"/>
-                        <outlet property="clueThreeTextField" destination="ysM-Sw-q0O" id="E7w-cK-2Kk"/>
-                        <outlet property="countryTextField" destination="h09-bm-laR" id="nlu-wA-sgl"/>
-                        <outlet property="locationTextField" destination="Znp-Fr-YQm" id="OBd-jA-CIG"/>
+                        <outlet property="clue1TextField" destination="aVd-fV-Lm9" id="52D-eT-XVu"/>
+                        <outlet property="clue2TextField" destination="PVl-9O-ozE" id="dM4-DW-8PF"/>
+                        <outlet property="clue3TextField" destination="ysM-Sw-q0O" id="kVg-1G-ZP8"/>
+                        <outlet property="countryTextField" destination="h09-bm-laR" id="4VY-Lg-qwd"/>
+                        <outlet property="locationTextField" destination="Znp-Fr-YQm" id="Zyz-l3-QzI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fws-55-haE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -238,7 +249,7 @@
                                     <constraint firstAttribute="width" constant="150" id="XRQ-I3-Kxj"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-S1-n2x">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-S1-n2x" userLabel="Clues Text View">
                                 <rect key="frame" x="20" y="411" width="374" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -266,15 +277,9 @@
                         <viewLayoutGuide key="safeArea" id="qYB-N1-nE8"/>
                     </view>
                     <connections>
-                        <outlet property="cluesLabel" destination="ACR-NM-Hpp" id="366-es-Y8f"/>
-                        <outlet property="cluesTextView" destination="ACR-NM-Hpp" id="DPb-bj-03L"/>
-                        <outlet property="country" destination="Bei-51-BgW" id="1lQ-7h-rbR"/>
-                        <outlet property="countryLabel" destination="Bei-51-BgW" id="c8O-by-glq"/>
-                        <outlet property="countryTextView" destination="Bei-51-BgW" id="CXX-Sx-mbB"/>
-                        <outlet property="location" destination="faQ-T1-yra" id="u0s-Wt-GEX"/>
-                        <outlet property="locationLabel" destination="faQ-T1-yra" id="DrQ-i3-tpE"/>
-                        <outlet property="locationTextView" destination="faQ-T1-yra" id="28p-AC-2mh"/>
-                        <outlet property="textView" destination="wrk-S1-n2x" id="mcS-VX-NRJ"/>
+                        <outlet property="cluesListTextView" destination="wrk-S1-n2x" id="fCw-XG-tbP"/>
+                        <outlet property="countryLabel" destination="Bei-51-BgW" id="Ev2-ti-phE"/>
+                        <outlet property="locationLabel" destination="faQ-T1-yra" id="Prt-6y-VZ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59H-N5-K4M" userLabel="First Responder" sceneMemberID="firstResponder"/>

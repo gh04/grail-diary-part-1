@@ -15,8 +15,9 @@ class POIDetailViewController: UIViewController {
  
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet weak var cluesLabel: UILabel!
-    @IBOutlet weak var textView: UITextView!
+ 
+    @IBOutlet weak var cluesListTextView: UITextView!
+    
     
     var poi: POI?
     
@@ -36,7 +37,7 @@ class POIDetailViewController: UIViewController {
             cluesText += "∙ \(clues)\n"
         }
         
-        textView.text = cluesText
+        cluesListTextView.text = cluesText
         
         
     }
