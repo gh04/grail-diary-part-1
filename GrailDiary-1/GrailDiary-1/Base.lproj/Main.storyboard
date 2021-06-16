@@ -27,7 +27,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="o7T-x9-W6D">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="o7T-x9-W6D">
                                                     <rect key="frame" x="20" y="10.5" width="72.5" height="39.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJu-Ru-8dK">
@@ -47,14 +47,20 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ho4-h4-bEY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ho4-h4-bEY">
                                                     <rect key="frame" x="315" y="20" width="79" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ho4-h4-bEY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o7T-x9-W6D" secondAttribute="trailing" constant="8" id="HSr-iJ-m17"/>
+                                                <constraint firstItem="o7T-x9-W6D" firstAttribute="leading" secondItem="aNk-wt-Ped" secondAttribute="leadingMargin" id="OIz-SI-URR"/>
+                                                <constraint firstItem="Ho4-h4-bEY" firstAttribute="trailing" secondItem="aNk-wt-Ped" secondAttribute="trailingMargin" id="OQT-cH-RFD"/>
+                                                <constraint firstItem="o7T-x9-W6D" firstAttribute="centerY" secondItem="aNk-wt-Ped" secondAttribute="centerY" id="WOf-zz-Uer"/>
+                                                <constraint firstItem="Ho4-h4-bEY" firstAttribute="centerY" secondItem="aNk-wt-Ped" secondAttribute="centerY" id="tBd-ky-WEn"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -69,7 +75,9 @@
                             <constraint firstItem="l6O-2p-Zy6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="chL-C0-JuT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Grail Diary" id="Vtu-Bo-lPd"/>
+                    <navigationItem key="navigationItem" title="Grail Diary" id="Vtu-Bo-lPd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PWf-cL-38y"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
