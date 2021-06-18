@@ -37,6 +37,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		635253ED267D67C400F303C0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				636B280526799119009FDB6E /* AppDelegate.swift */,
+				636B280726799119009FDB6E /* SceneDelegate.swift */,
+				636B280E2679911A009FDB6E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		635253EE267D67CE00F303C0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				636B280B26799119009FDB6E /* Main.storyboard */,
+				636B28102679911A009FDB6E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		635253EF267D67DC00F303C0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				636B280926799119009FDB6E /* POIsTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		635253F0267D67EB00F303C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		635253F1267D67F600F303C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		636B27F926799119009FDB6E = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +97,11 @@
 		636B280426799119009FDB6E /* GrailDiary-1 */ = {
 			isa = PBXGroup;
 			children = (
-				636B280526799119009FDB6E /* AppDelegate.swift */,
-				636B280726799119009FDB6E /* SceneDelegate.swift */,
-				636B280926799119009FDB6E /* POIsTableViewController.swift */,
-				636B280B26799119009FDB6E /* Main.storyboard */,
-				636B280E2679911A009FDB6E /* Assets.xcassets */,
-				636B28102679911A009FDB6E /* LaunchScreen.storyboard */,
+				635253EF267D67DC00F303C0 /* View Controllers */,
+				635253F1267D67F600F303C0 /* Views */,
+				635253EE267D67CE00F303C0 /* Storyboards */,
+				635253F0267D67EB00F303C0 /* Model */,
+				635253ED267D67C400F303C0 /* Resources */,
 				636B28132679911A009FDB6E /* Info.plist */,
 			);
 			path = "GrailDiary-1";
