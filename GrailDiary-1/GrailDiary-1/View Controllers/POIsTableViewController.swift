@@ -54,6 +54,16 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+}
+
+// MARK: - Class Extension
+extension POIsTableViewController: AddPOIDelegate {
+    func poiWasAdded(_ poi: POI) {
+        pois.append(poi)
+        dismiss(animated: true, completion: nil)
+        tableView.reloadData()
+    }
+    
     
 }
 
