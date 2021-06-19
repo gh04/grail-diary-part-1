@@ -33,11 +33,36 @@ class AddPOIViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+        guard let location = locationTextField.text, let country = countryTextField.text else { return }
+        
+        var clues: [String] = []
+        
+        if let clue1 = clue1TextField.text,
+           !clue1.isEmpty {
+            clues.append(clue1)
+        }
+        
+        if let clue2 = clue2TextField.text,
+           !clue2.isEmpty {
+            clues.append(clue2)
+        }
+        if let clue3 =  clue3TextField.text,
+           !clue3.isEmpty {
+            clues.append(clue3)
+        }
+        
+        
+        let poi = POI(location: location, country: country, clues: clues)
+        
+        delegate?.poiWasAdded(poi)
+        dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+
     }
-    
-  
+
 
 }
