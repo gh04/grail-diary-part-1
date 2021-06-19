@@ -8,7 +8,7 @@
 import UIKit
 
 class POITableViewCell: UITableViewCell {
-
+    
     // MARK: - Properties
     var poi: POI? {
         didSet {
@@ -25,19 +25,19 @@ class POITableViewCell: UITableViewCell {
         guard let location = poi?.location, let country = poi?.country else { return }
         
         guard let clues = poi?.clues else { return cluesLabel.text = "no clues" }
-    
+        
         
         locationLabel.text = location
         countryLabel.text = country
         
         if clues.count == 1 {
             cluesLabel.text = "\(clues.count) clue"
+        } else if clues.count == 0 {
+            cluesLabel.text = "no clues"
+        } else {
+            
+            cluesLabel.text = "\(clues.count) clues"
         }
-        
-        cluesLabel.text = "\(clues.count) of clues"
-        
     }
     
-
-
 }

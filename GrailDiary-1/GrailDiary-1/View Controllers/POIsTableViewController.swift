@@ -37,16 +37,17 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
         
         let poi = pois[indexPath.row]
         
-        cell.locationLabel.text = poi.location
-        cell.countryLabel.text = poi.country
-        
-        if poi.clues.count == 1 {
-            cell.cluesLabel.text = "\(poi.clues.count) clue"
-        } else if poi.clues.count == 0 {
-            cell.cluesLabel.text = "\(poi.clues.count) clues"
-        } else {
-        cell.cluesLabel.text = "\(poi.clues.count) clues"
-        }
+        cell.poi = poi
+//        cell.locationLabel.text = poi.location
+//        cell.countryLabel.text = poi.country
+//
+//        if poi.clues.count == 1 {
+//            cell.cluesLabel.text = "\(poi.clues.count) clue"
+//        } else if poi.clues.count == 0 {
+//            cell.cluesLabel.text = "\(poi.clues.count) clues"
+//        } else {
+//        cell.cluesLabel.text = "\(poi.clues.count) clues"
+//        }
         return cell
         
     }
