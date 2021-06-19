@@ -23,9 +23,6 @@ class POIsTableViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    
-
-
 }
 
 // MARK: - POIsTableViewController Extension 
@@ -41,17 +38,25 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
         let poi = pois[indexPath.row]
         
         cell.locationLabel.text = poi.location
-        cell.countryLabel.text = poi.location
+        cell.countryLabel.text = poi.country
         
         if poi.clues.count == 1 {
             cell.cluesLabel.text = "\(poi.clues.count) clue"
         } else if poi.clues.count == 0 {
-            cell.cluesLabel.text = "\(poi.clues.count) no clues"
+            cell.cluesLabel.text = "\(poi.clues.count) clues"
         } else {
         cell.cluesLabel.text = "\(poi.clues.count) clues"
         }
         return cell
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddPOIModalSegue" {
+            guard let addPOIVC = segue.destination as? AddPOIViewController else { return }
+            
+            addPOIVC.delegate = self
+        }
     }
     
 }
