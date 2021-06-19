@@ -28,7 +28,7 @@ class POIsTableViewController: UIViewController {
 
 }
 
-
+// MARK: - POIsTableViewController Extension 
 extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
