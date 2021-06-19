@@ -63,6 +63,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cluesLabel" destination="Ho4-h4-bEY" id="lCr-lC-NPh"/>
+                                            <outlet property="countryLabel" destination="cSp-Vr-fGl" id="4Xu-sn-AYh"/>
+                                            <outlet property="locationLabel" destination="EJu-Ru-8dK" id="dlM-ec-ZeH"/>
                                             <segue destination="gbm-hp-w3b" kind="show" identifier="ShowPOIDetailSegue" id="zVT-he-YtS"/>
                                         </connections>
                                     </tableViewCell>
@@ -85,6 +88,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="l6O-2p-Zy6" id="oFd-Ra-g5C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
