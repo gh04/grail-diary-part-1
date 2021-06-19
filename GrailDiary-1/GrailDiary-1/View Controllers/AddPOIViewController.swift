@@ -12,7 +12,7 @@ protocol AddPOIDelegate {
 }
 
 class AddPOIViewController: UIViewController {
-
+    
     // MARK: - Properties
     var delegate: AddPOIDelegate?
     
@@ -27,8 +27,7 @@ class AddPOIViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+     
     }
     
     // MARK: - IBActions
@@ -61,8 +60,12 @@ class AddPOIViewController: UIViewController {
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
-
+        
     }
+    
+}
 
 
+extension AddPOIViewController: UITextFieldDelegate {
+    
 }
