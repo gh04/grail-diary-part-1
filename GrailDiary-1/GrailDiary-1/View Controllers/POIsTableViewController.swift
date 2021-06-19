@@ -52,15 +52,17 @@ extension POIsTableViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "AddPOIModalSegue" {
+        
+        switch segue.identifier {
+        case "AddPOIModalSegue":
             guard let addPOIVC = segue.destination as? AddPOIViewController else { return }
-            
             addPOIVC.delegate = self
-        } else if segue.identifier == "ShowPOIDetailSegue" {
+        case "ShowPOIDetailSegue":
             guard let poiDetailVC = segue.destination as? POIDetailViewController, let indexPath = tableView.indexPathForSelectedRow else { return }
-            
             let poi = pois[indexPath.row]
             poiDetailVC.poi = poi
+        default:
+            return
         }
     }
     
@@ -73,7 +75,6 @@ extension POIsTableViewController: AddPOIDelegate {
         dismiss(animated: true, completion: nil)
         tableView.reloadData()
     }
-    
     
 }
 

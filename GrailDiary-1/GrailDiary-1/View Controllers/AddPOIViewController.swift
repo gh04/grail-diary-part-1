@@ -65,7 +65,7 @@ class AddPOIViewController: UIViewController {
     
 }
 
-
+// MARK: - Class extension
 extension AddPOIViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
