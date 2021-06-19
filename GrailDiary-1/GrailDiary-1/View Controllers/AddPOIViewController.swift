@@ -7,8 +7,15 @@
 
 import UIKit
 
+protocol AddPOIDelegate {
+    func poiWasAdded(_ poi: POI)
+}
+
 class AddPOIViewController: UIViewController {
 
+    // MARK: - Properties
+    var delegate: AddPOIDelegate?
+    
     // MARK: - IBOutlets
     @IBOutlet var locationTextField: UITextField!
     @IBOutlet var countryTextField: UITextField!
@@ -25,10 +32,10 @@ class AddPOIViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func save(_ sender: Any) {
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
     }
     
-    @IBAction func cancel(_ sender: Any) {
+    @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
     }
     
   
