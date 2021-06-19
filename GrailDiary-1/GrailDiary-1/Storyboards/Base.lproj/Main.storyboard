@@ -159,6 +159,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sWK-lA-VlN"/>
+                    <connections>
+                        <outlet property="cluesTextView" destination="SXF-Ta-eRo" id="dmh-yZ-r5X"/>
+                        <outlet property="countryLabel" destination="WsM-ox-a8M" id="1hS-sM-be0"/>
+                        <outlet property="locationLabel" destination="SCX-4j-WAp" id="bIs-k0-doc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qf4-B8-Vsr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
